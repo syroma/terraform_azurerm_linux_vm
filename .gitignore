@@ -16,3 +16,5 @@ terraform.rc
 
 # ignore crashlog
 crash.log
+
+terraform.tfvars.azurerm_linux_vm

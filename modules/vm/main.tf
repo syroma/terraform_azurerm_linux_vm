@@ -23,7 +23,7 @@ resource "azurerm_network_interface_security_group_association" "nic_sec_assoc" 
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
 
-resource "azurerm_linux_virtual_machine" "vm" {
+resource "azurerm_linux_virtual_machine" "vm1" {
   name                = "${var.env_prefix}-machine"
   location            = var.resource_group.location
   resource_group_name = var.resource_group.name

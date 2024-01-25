@@ -53,4 +53,29 @@ variable "private_ip_address_allocation" {
 # variable "resource_group" {}
 # variable "vnet" {}
 
-#variable "network_interface" {}
+#variable "network_interface_ids" {}
+
+variable "vm_map" {
+  type = map(object({
+    name           = string
+    size           = string
+    admin_password = string
+  }))
+  default = {
+    "vm1" = {
+      admin_password = "Password1"
+      name           = "FTP-Serv-01"
+      size           = "Standard_B1s"
+    }
+    "vm2" = {
+      admin_password = "Password2"
+      name           = "MailServ-01"
+      size           = "Standard_B1s"
+    }
+    "vm3" = {
+      admin_password = "Password3"
+      name           = "SSH-Serv-01"
+      size           = "Standard_B1s"
+    }
+  }
+}

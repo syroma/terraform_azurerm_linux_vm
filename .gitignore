@@ -8,7 +8,7 @@ OLD_MAINTF/
 *.tfstate.*
 
 # tf variable files
-*.tfvars
+# *.tfvars
 
 # Ignore CLI configuration files
 .terraformrc
